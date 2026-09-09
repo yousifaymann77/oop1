@@ -11,6 +11,19 @@
             #region Q 1 b)What happens when a Customer variable is copied into another variable and one variable modifies the object
             // The two variables will have the same modification because class is refrene type 
             #endregion
+
+            #region  Q 2 a) Identify at least three problems with this design from an encapsulation perspectiveMyRegion
+            // All fields are public and can be accessed directly from any place in the project,
+            // No validations so invalid values can be assigned,
+            // No Bussiness rules 
+            #endregion
+
+            #region Q 2 b) How can private fields and public properties improve this design?MyRegion
+            // Private fields and public properties improve encapsulation by hiding the internal data and controlling access to it
+            // and Properties can also contain validation logic before assigning values
+            #endregion
+
+
         }
     }
 }
