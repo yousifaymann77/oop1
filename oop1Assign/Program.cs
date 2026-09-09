@@ -24,6 +24,20 @@
             #endregion
 
 
+            // ------------- Part Two -------------
+            #region Create one DeliveryAddress value, copy it into a second variable, modify the copy, and print both values to prove that the original did not change.MyRegion
+            DeliveryAddress address = new DeliveryAddress("cairo", "Abbas", 33);
+            DeliveryAddress address2 = new DeliveryAddress();
+
+            address2 = address;
+            address2.City = "Shebin";
+            address2.Street = "paris";
+            Console.WriteLine(address.GetFullAddress());
+            Console.WriteLine(address2.GetFullAddress());
+
+            #endregion
+
+
         }
     }
 }
