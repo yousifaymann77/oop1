@@ -12,6 +12,26 @@ namespace oop1Assign
         private double deliveryFee;
 
         public string Destination { get; set; }
+
+
+        public Shipment(string trackingCode)
+        {
+            this.TrackingCode = trackingCode;
+            this.description = "Unknown";
+            this.weight = 1;
+            this.deliveryFee = 50;
+            this.Destination = "Undefined";
+
+        }
+
+        public Shipment(string trackingCode ,string description , double weight , double deliveryFee , string destination)
+        {
+            this.TrackingCode = trackingCode;
+            this.Description = description;
+            this.Weight = weight;
+            this.DeliveryFee = deliveryFee;
+            this.Destination = destination;
+        }
         public string TrackingCode
         {
             get
