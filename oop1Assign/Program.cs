@@ -102,7 +102,22 @@
                     {
                         Console.WriteLine("Invalid delivery fee , please Enter a Positive Number");
                     }
-                } while (!isparsed || deliveryFee <= 0); 
+                } while (!isparsed || deliveryFee <= 0);
+                #endregion
+
+                #region Part2 Q6 c. Create each Shipment and add it to the DeliveryCenter
+                Shipment shipment = new Shipment(trackingCode, description, weight, deliveryFee, destination);
+
+                bool added = deliveryCenter.AddShipment(shipment);
+
+                if (added)
+                {
+                    Console.WriteLine("Shipment is added");
+                }
+                else
+                {
+                    Console.WriteLine("There is a problem in adding the Shipment");
+                } 
                 #endregion
             }
 
