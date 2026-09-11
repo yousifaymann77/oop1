@@ -37,6 +37,12 @@
 
             #endregion
 
+            Console.Clear();
+            Console.WriteLine("-------------------------------");
+
+            #region part2 Q6 a)
+            DeliveryCenter deliveryCenter = new DeliveryCenter(); 
+            #endregion
 
         }
     }

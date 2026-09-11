@@ -10,7 +10,7 @@ namespace oop1Assign
 
         public DeliveryCenter()
         {
-            shipments = new Shipment[10];
+            this.shipments = new Shipment[10];
         }
 
         public Shipment this[int index]
