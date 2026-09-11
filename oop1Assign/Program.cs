@@ -138,6 +138,16 @@
                 Console.WriteLine($"Estimated Cost : {shipment.EstimatedCost}");
             }
             #endregion
+            Console.WriteLine("-------------------------------");
+            Console.WriteLine("-------------------------------");
+            #region Part2 Q6 e. Ask the user to enter a tracking code.
+            string searchCode;
+            Console.Write("Enter a Tracking code to search : ");
+            searchCode = Console.ReadLine(); 
+            #endregion
+
+
+
 
         }
     }
