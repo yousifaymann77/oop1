@@ -143,9 +143,13 @@
             #region Part2 Q6 e. Ask the user to enter a tracking code.
             string searchCode;
             Console.Write("Enter a Tracking code to search : ");
-            searchCode = Console.ReadLine(); 
+            searchCode = Console.ReadLine();
             #endregion
 
+            #region part2 Q6 f. Search for the shipment using the string indexer.
+            Shipment searchShip = deliveryCenter[searchCode];
+
+            #endregion
 
 
 
