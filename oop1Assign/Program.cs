@@ -44,6 +44,68 @@
             DeliveryCenter deliveryCenter = new DeliveryCenter(); 
             #endregion
 
+            for(int i = 1; i <=3; i++)
+            {
+                #region Part 2 Q6 b. Read data for three shipments from the user.
+                Console.WriteLine($"Enter details for shipment {i} ");
+                string trackingCode;
+                do
+                {
+                    Console.WriteLine("Enter tracking code: ");
+                    trackingCode = Console.ReadLine();
+
+                    if (string.IsNullOrWhiteSpace(trackingCode))
+                    {
+                        Console.WriteLine("Invalid tracking code. Please try again.");
+                    }
+                } while (string.IsNullOrWhiteSpace(trackingCode));
+
+                string description;
+                do
+                {
+                    Console.WriteLine("Enter the Description : ");
+                    description = Console.ReadLine();
+
+                    if (string.IsNullOrWhiteSpace(description))
+                    {
+                        Console.WriteLine("Invalid Description. Please try again.");
+                    }
+                }
+                while (string.IsNullOrWhiteSpace(description));
+
+
+                double weight;
+                bool isparsed = false;
+                do
+                {
+                    Console.Write("Enter weight : ");
+                    isparsed = double.TryParse(Console.ReadLine(), out weight);
+
+                    if (!isparsed || weight <= 0)
+                    {
+                        Console.WriteLine("Invalid weight. Please enter a positive number.");
+                    }
+                }
+                while (!isparsed || weight <= 0);
+
+                Console.Write("Enter The Destination : ");
+                string destination = Console.ReadLine();
+
+                double deliveryFee;
+                bool isparsed1 = false;
+
+                do
+                {
+                    Console.Write("Enter the DeliveryFee : ");
+                    isparsed1 = double.TryParse(Console.ReadLine(), out deliveryFee);
+                    if (!isparsed || deliveryFee <= 0)
+                    {
+                        Console.WriteLine("Invalid delivery fee , please Enter a Positive Number");
+                    }
+                } while (!isparsed || deliveryFee <= 0); 
+                #endregion
+            }
+
         }
     }
 }
