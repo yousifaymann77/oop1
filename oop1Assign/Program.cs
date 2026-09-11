@@ -158,7 +158,24 @@
             else
             {
                 Console.WriteLine("Shipment not Found");
-            } 
+            }
+            #endregion
+
+            #region part2 Q6 h.Demonstrate the DeliveryAddress struct copy behavior.
+            Console.WriteLine("\n\n------Struct Copy Test-----------");
+
+            DeliveryAddress address1 = new DeliveryAddress();
+
+            address1.City = "Shebin";
+
+            DeliveryAddress adress2 = new DeliveryAddress();
+            
+
+            Console.WriteLine($"Before Changing the copy : Address1 : {address1.City} - Address2 : {adress2.City}");
+
+            adress2.City = "Alexandria ";
+
+            Console.WriteLine($"After Changing the copy : Address1 : {address1.City} - Address2 : {adress2.City}"); 
             #endregion
 
         }
