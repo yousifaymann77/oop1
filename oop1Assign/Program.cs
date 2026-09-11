@@ -153,13 +153,7 @@
             #region part2 Q6 g. Print the shipment if found; otherwise print:Shipment not found. 
             if (!string.IsNullOrWhiteSpace(searchShip.TrackingCode))
             {
-                Console.WriteLine($"Tracking Code: {searchShip.TrackingCode}");
-                Console.WriteLine($"Description: {searchShip.Description}");
-                Console.WriteLine($"Weight: {searchShip.Weight}");
-                Console.WriteLine($"Delivery Fee: {searchShip.DeliveryFee}");
-                Console.WriteLine($"Destination: {searchShip.Destination}");
-                Console.WriteLine($"Estimated Cost: {searchShip.EstimatedCost}");
-
+                Console.Write($"Shipment found : {searchShip.TrackingCode} -- {searchShip.Description}");
             }
             else
             {
