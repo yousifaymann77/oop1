@@ -96,7 +96,19 @@ namespace oop1Assign
             {
                 return deliveryFee + (weight * 5);
             }
+        }
 
+        public void UpdateDeliveryFee(decimal newFee)
+        {
+            if (newFee > 0)
+            {
+                deliveryFee = (double)newFee;
+            }
+        }
+
+        public string PrintShipment()
+        {
+            return $"Tracking Code: {trackingCode}, Description: {description}, Weight: {weight} kg, Delivery Fee: ${deliveryFee}, Destination: {Destination}, Estimated Cost: ${EstimatedCost}";
         }
     }
 }
