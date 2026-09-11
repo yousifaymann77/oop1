@@ -78,7 +78,7 @@
                 bool isparsed = false;
                 do
                 {
-                    Console.Write("Enter weight : ");
+                    Console.Write("Enter weight in kg : ");
                     isparsed = double.TryParse(Console.ReadLine(), out weight);
 
                     if (!isparsed || weight <= 0)
@@ -120,6 +120,24 @@
                 } 
                 #endregion
             }
+
+            #region part2 Q6 d. Print the three shipments using the integer indexer.
+            Console.Clear();
+            Console.WriteLine("-----All Shipments-------");
+
+            for (int i = 0; i < 3; i++)
+            {
+                Shipment shipment = deliveryCenter[i];
+
+                Console.WriteLine($"-----Shipment {i + 1}------ ");
+                Console.WriteLine($"Tracking code : {shipment.TrackingCode}");
+                Console.WriteLine($"Description : {shipment.Description}");
+                Console.WriteLine($"Weight : {shipment.Weight}");
+                Console.WriteLine($"Delivery Fee : {shipment.DeliveryFee}");
+                Console.WriteLine($"Destination : {shipment.Destination}");
+                Console.WriteLine($"Estimated Cost : {shipment.EstimatedCost}");
+            }
+            #endregion
 
         }
     }
